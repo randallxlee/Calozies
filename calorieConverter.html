@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calozies</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="calozies.css">
+  <link rel="icon" href="https://i.ibb.co/HX6nSdx/Black-and-Cream-Hair-Stylist-Fashion-Logo-4.png/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* The Modal (background) */
+.modal, .modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close, .close1 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close, .close1:hover,
+.close, .close1:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
+<body>
+  <header>
+    <p></p>
+      <a href="calozies.html"><center><img id="image1" src="https://i.ibb.co/HX6nSdx/Black-and-Cream-Hair-Stylist-Fashion-Logo-4.png" alt="Dunedin Dairy" width="100" height="100"/></center></a>
+      <div id="titleHeader">Calozies.</div>
+  </header>
+  <span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
+  <ul class="topnav" id="table">
+  <ul class="topnav" id="table">
+    <!--<li><a href="Personal.html">Home</a></li>
+    <li><a href="aboutPersonal.html">About</a></li>
+    <li class="tableElements" onclick="showProducts();">&#128722; PRODUCTS </li>
+    <li class="tableElements" onclick="showNews();">&#128240; NEWS</li>
+    <li class="tableElements" onclick="showMap();">&#129517; LOCATION</li>
+    <li class="tableElements" onclick="showGuestBook();">&#128214; GUEST BOOK</li>-->
+  </ul>
+  <center><h1>Calories Converter.</h1></center>
+  <center><h5>Convert your meal into a workout</h5></center>
+  <div id="fitsText">
+    <center><img src="https://i.ibb.co/3fQsbnx/orimi-protograph-d-HQQv-BKTjo-unsplash-removebg-preview.png" width="130" height="160"/></center>
+    <p>Pearl Milk Tea</p>
+    <p>Calories: 335-430</p>
+    <center><button id="myBtn" onclick="milktea()">Work it off</button></center>
+  </div>
+  <p></p>
+  <div id="fitsText">
+    <center><img src="https://i.ibb.co/6yg1fC4/rahul-upadhyay-y-DKHJxfi-WDk-unsplash-removebg-preview.png" width="150" height="170"/></center>
+    <div>Pizza (Per slice)</div>
+    <p>Calories: 250-275</p>
+    <center><button id="myBtn2" onclick="pizza()">Work it off</button></center>
+  </div>
+  <p></p>
+  <div id="fitsText">
+    <center><img src="https://i.ibb.co/C85mCQy/riccardo-bergamini-O2y-Nz-Xdq-Ou0-unsplash-removebg-preview.png" width="180" height="150"/></center>
+    <div>Sushi (Per roll)</div>
+    <p>Calories: 180-300</p>
+    <center><button id="myBtn2" onclick="pizza()">Work it off</button></center>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="calozies.html">Home</a>
+  <a href="caloziesAbout.html">About</a>
+  <a href="calorieConverter.html">Calories Converter</a>
+  <a href="caloziesRecipe.html">Recipes</a>
+</div>
+
+<!-- Trigger/Open The Modal -->
+<!--<center><button id="myBtn">Work it off</button></center>-->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div id="modalDisplay" class="modal-content">
+    <span class="close">&times;</span>
+      <p>&#127939; Running: 5km</p>
+      <p>&#128690; Cycling: 15km</p>
+      <p>&#128690; Swimming: 15km</p>
+  </div>
+
+</div>
+
+<div id="myModal2" class="modal2">
+
+  <!-- Modal content -->
+  <div id="modalDisplay" class="modal-content">
+    <span class="close1">&times;</span>
+      <p>&#127939; Running: 3km</p>
+      <p>&#128690; Cycling: 10km</p>
+      <p>&#128690; Swimming: 10km</p>
+  </div>
+
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+//var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+function milktea(){
+  var modal = document.getElementById("myModal");
+  modal.style.display = "block";
+  var span = document.getElementsByClassName("close")[0];
+  let btn = document.getElementById("myBtn");
+  //btn.onclick = function() {
+    //modal.style.display = "block";
+  //}
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+
+function pizza(){
+  var modal = document.getElementById("myModal2");
+  modal.style.display = "block";
+  var span = document.getElementsByClassName("close1")[0];
+  let btn = document.getElementById("myBtn");
+  //btn.onclick = function() {
+    //modal.style.display = "block";
+  //}
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+</script>
+<p></p>
+</body>
+<center><footer>&copy; Calozies 2020 </footer></center>
+</html>
